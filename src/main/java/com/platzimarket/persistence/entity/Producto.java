@@ -27,6 +27,23 @@ public class Producto {
     private String codigoDeBarra;
     @Column(name="precio_venta")
     private Double precioVenta;
+
+    public Categoria getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(Categoria categoria) {
+        this.categoria = categoria;
+    }
+
+    public List<ComprasProducto> getProductos() {
+        return productos;
+    }
+
+    public void setProductos(List<ComprasProducto> productos) {
+        this.productos = productos;
+    }
+
     @Column(name="cantidad_stock")
     private Integer cantidadStock;
     private Boolean estado;

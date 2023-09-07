@@ -13,6 +13,14 @@ import javax.persistence.Table;
 @Entity
 @Table(name="categorias")
 public class Categoria {
+    public List<Producto> getProductos() {
+        return productos;
+    }
+
+    public void setProductos(List<Producto> productos) {
+        this.productos = productos;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id_categoria")
